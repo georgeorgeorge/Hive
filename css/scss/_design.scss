@@ -1,0 +1,392 @@
+.site_container {
+  width: 100vw;
+  margin: 80px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+
+  .half {
+    width: 50vw;
+    float: left;
+    @include breakpoint(960px) {
+      width: 100vw;
+    }
+
+    .inner_container {
+      width: 100%;
+      overflow: hidden;
+
+      .half {
+        width: 25vw;
+        float: left;
+
+        @include breakpoint(960px) {
+          width: 50vw;
+        }
+
+        @include breakpoint(480px) {
+          width: 100vw;
+        }
+
+      }
+
+    }
+
+    .pod {
+      width: 100%;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      position: relative;
+
+      .pod_wrapper {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+
+        .title {
+          margin: 30px 30px 15px;
+        }
+
+        .links {
+          margin: 0px 30px 30px;
+
+          .link {
+            display: block;
+            margin-bottom: 5px;
+
+            opacity: 0;
+            @include css3_fix(transform, translateY(50px));
+            @include easing(all, 1000ms);
+
+            &:nth-child(1) {
+              @include css3_fix(transition-delay, 0ms);
+            }
+
+            &:nth-child(2) {
+              @include css3_fix(transition-delay, 50ms);
+            }
+
+            &:nth-child(3) {
+              @include css3_fix(transition-delay, 100ms);
+            }
+
+            a {
+              display: inline-block;
+              text-decoration: none;
+              padding-left: 0px;
+              @include easing(all, 300ms);
+
+              .arrow {
+                @include easing(all, 300ms);
+              }
+
+              @include hover() {
+                padding-left: 10px;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      .imagery {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        @include easing(all, 300ms);
+
+        .background, .foreground {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          @include easing(all, 600ms);
+          background-repeat: no-repeat;
+        }
+
+      }
+
+      @include hover() {
+        .link {
+          opacity: 1;
+          @include css3_fix(transform, translateY(0px));
+          @include easing(all, 600ms);
+        }
+
+      }
+
+      @include touch_fix() {
+        opacity: 1;
+        @include css3_fix(transform, translateY(0px));
+      }
+
+    }
+
+  }
+
+}
+
+.pod_brief {
+  height: 60vh;
+  height: calc(60vh - 40px);
+  min-height: 500px;
+  background-color: $black;
+  color: $white;
+
+  .links a {
+    color: $white;
+
+    .arrow {
+      border-color: $white;
+    }
+
+    @include hover() {
+      color: $yellow;
+
+      .arrow {
+        border-color: $yellow;
+      }
+
+    }
+
+  }
+
+  .background {
+    background-image: url(../assets/Bee-afhive.png);
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .foreground {
+    background-image: url(../assets/Brief-afhive.png);
+    background-position: center bottom;
+    background-size: contain;
+    margin: 30px 30px 0px 30px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .foreground {
+      margin: 30px 60px 0px 60px;
+    }
+  }
+
+}
+
+.pod_projects {
+  height: 40vh;
+  height: calc(40vh - 40px);
+  min-height: 300px;
+  background-color: $yellow_lighter;
+  color: $red;
+
+  @include breakpoint(960px) {
+    background-color: $yellow_light;
+  }
+
+  .background {
+    background-image: url(../assets/plant-afhive.png);
+    background-position: left bottom;
+    background-size: contain;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .foreground {
+    background-image: url(../assets/Jobs-afhive.png);
+    background-position: right bottom;
+    background-size: contain;
+    margin: 30px 30px 0px 15px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    .foreground {
+      margin: 60px 30px 0px 15px;
+    }
+  }
+
+}
+
+.pod_approvals {
+  height: 40vh;
+  height: calc(40vh - 40px);
+  min-height: 300px;
+  background-color: $yellow_lighter;
+  color: $red;
+
+  .background {
+    background-image: url(../assets/plant-afhive.png);
+    background-position: left bottom;
+    background-size: contain;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .foreground {
+    background-image: url(../assets/Todo-afhive.png);
+    background-position: right bottom;
+    background-size: contain;
+    margin: 30px 30px 0px 15px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    .foreground {
+      margin: 60px 30px 0px 15px;
+    }
+  }
+
+  @include touch_fix() {
+    .foreground {
+      margin: 60px 30px 0px 15px;
+    }
+  }
+
+}
+
+.pod_request {
+  height: 30vh;
+  height: calc(20vh - 20px);
+  min-height: 250px;
+  background-color: $yellow;
+  color: $red;
+
+  .foreground {
+    background-image: url(../assets/Request-afhive.png);
+    background-position: right bottom;
+    background-size: contain;
+    margin: 15px 15px 0px 15px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    .foreground {
+      margin: 45px 15px 0px 15px;
+    }
+  }
+
+  @include touch_fix() {
+    .foreground {
+      margin: 45px 15px 0px 15px;
+    }
+  }
+
+}
+
+.pod_support {
+  height: 30vh;
+  height: calc(30vh - 20px);
+  min-height: 250px;
+  background-color: $white;
+  color: $red;
+
+  .links a {
+    color: $black;
+
+    .arrow {
+      border-color: $black;
+    }
+
+    @include hover() {
+      color: $red;
+
+      .arrow {
+        border-color: $red;
+      }
+
+    }
+
+  }
+
+  .foreground {
+    background-image: url(../assets/Help-afhive.png);
+    background-position: right bottom;
+    background-size: contain;
+    margin: 45px 5px 0px 15px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    .foreground {
+      margin: 75px 5px 0px 15px;
+    }
+  }
+
+  @include touch_fix() {
+    .foreground {
+      margin: 75px 5px 0px 15px;
+    }
+  }
+
+}
+
+.pod_assets {
+  height: 60vh;
+  height: calc(60vh - 40px);
+  min-height: 500px;
+  background-color: $yellow_light;
+  color: $red;
+
+  .links a {
+    color: $black;
+
+    .arrow {
+      border-color: $black;
+    }
+
+    @include hover() {
+      color: $red;
+
+      .arrow {
+        border-color: $red;
+      }
+
+    }
+
+  }
+
+  .foreground {
+    background-image: url(../assets/Library-afhive.png);
+    background-position: right bottom;
+    background-size: contain;
+    margin: 30px 15px 0px 15px;
+  }
+
+  @include hover() {
+    .imagery {
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    .foreground {
+      margin: 30px 15px 0px 45px;
+    }
+  }
+
+  @include touch_fix() {
+    .foreground {
+      margin: 30px 15px 0px 45px;
+    }
+  }
+
+}

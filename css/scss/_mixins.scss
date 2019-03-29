@@ -1,0 +1,39 @@
+@mixin breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    body.activate_hover & {
+      @content;
+    }
+  }
+}
+
+@mixin touch_fix() {
+  body.no_hover & {
+    @content;
+  }
+}
+
+@mixin css3_fix($el, $val) {
+  -webkit-#{$el}: $val;
+     -moz-#{$el}: $val;
+      -ms-#{$el}: $val;
+       -o-#{$el}: $val;
+          #{$el}: $val;
+}
+
+@mixin easing($el, $time) {
+  -webkit-transition: $el $time cubic-bezier(0.770, 0.000, 0.175, 1.000);
+     -moz-transition: $el $time cubic-bezier(0.770, 0.000, 0.175, 1.000);
+       -o-transition: $el $time cubic-bezier(0.770, 0.000, 0.175, 1.000);
+          transition: $el $time cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+-webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}

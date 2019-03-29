@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo:400,700');
+
+@font-face {
+  font-family: "Dekar";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Dekar-Light.woff2") format("woff2"),
+       url("../fonts/Dekar-Light.woff") format("woff"),
+       url("../fonts/Dekar-Light.eot") format("eot"),
+       url("../fonts/Dekar-Light.ttf") format("ttf"),
+       url("../fonts/Dekar-Light.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Dekar";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Dekar-Regular.woff2") format("woff2"),
+       url("../fonts/Dekar-Regular.woff") format("woff"),
+       url("../fonts/Dekar-Regular.eot") format("eot"),
+       url("../fonts/Dekar-Regular.ttf") format("ttf"),
+       url("../fonts/Dekar-Regular.otf") format("otf");
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dekar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 70px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+a {
+  font-family: 'Aleo', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+i {
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}

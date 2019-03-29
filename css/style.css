@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700");
+@font-face {
+  font-family: "Dekar";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Dekar-Light.woff2") format("woff2"), url("../fonts/Dekar-Light.woff") format("woff"), url("../fonts/Dekar-Light.eot") format("eot"), url("../fonts/Dekar-Light.ttf") format("ttf"), url("../fonts/Dekar-Light.otf") format("otf");
+}
+@font-face {
+  font-family: "Dekar";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Dekar-Regular.woff2") format("woff2"), url("../fonts/Dekar-Regular.woff") format("woff"), url("../fonts/Dekar-Regular.eot") format("eot"), url("../fonts/Dekar-Regular.ttf") format("ttf"), url("../fonts/Dekar-Regular.otf") format("otf");
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dekar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 70px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+a {
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+i {
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.site_container {
+  width: 100vw;
+  margin: 80px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+.site_container .half {
+  width: 50vw;
+  float: left;
+}
+@media (max-width: 960px) {
+  .site_container .half {
+    width: 100vw;
+  }
+}
+.site_container .half .inner_container {
+  width: 100%;
+  overflow: hidden;
+}
+.site_container .half .inner_container .half {
+  width: 25vw;
+  float: left;
+}
+@media (max-width: 960px) {
+  .site_container .half .inner_container .half {
+    width: 50vw;
+  }
+}
+@media (max-width: 480px) {
+  .site_container .half .inner_container .half {
+    width: 100vw;
+  }
+}
+.site_container .half .pod {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.site_container .half .pod .pod_wrapper {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.site_container .half .pod .pod_wrapper .title {
+  margin: 30px 30px 15px;
+}
+.site_container .half .pod .pod_wrapper .links {
+  margin: 0px 30px 30px;
+}
+.site_container .half .pod .pod_wrapper .links .link {
+  display: block;
+  margin-bottom: 5px;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: all 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.site_container .half .pod .pod_wrapper .links .link:nth-child(1) {
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -ms-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+.site_container .half .pod .pod_wrapper .links .link:nth-child(2) {
+  -webkit-transition-delay: 50ms;
+  -moz-transition-delay: 50ms;
+  -ms-transition-delay: 50ms;
+  -o-transition-delay: 50ms;
+  transition-delay: 50ms;
+}
+.site_container .half .pod .pod_wrapper .links .link:nth-child(3) {
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  -ms-transition-delay: 100ms;
+  -o-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+.site_container .half .pod .pod_wrapper .links .link a {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 0px;
+  -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.site_container .half .pod .pod_wrapper .links .link a .arrow {
+  -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+body.activate_hover .site_container .half .pod .pod_wrapper .links .link a:hover {
+  padding-left: 10px;
+}
+.site_container .half .pod .imagery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.site_container .half .pod .imagery .background, .site_container .half .pod .imagery .foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  background-repeat: no-repeat;
+}
+body.activate_hover .site_container .half .pod:hover .link {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+body.no_hover .site_container .half .pod {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.pod_brief {
+  height: 60vh;
+  height: calc(60vh - 40px);
+  min-height: 500px;
+  background-color: #0d0e1e;
+  color: #ffffff;
+}
+.pod_brief .links a {
+  color: #ffffff;
+}
+.pod_brief .links a .arrow {
+  border-color: #ffffff;
+}
+body.activate_hover .pod_brief .links a:hover {
+  color: #fcd600;
+}
+body.activate_hover .pod_brief .links a:hover .arrow {
+  border-color: #fcd600;
+}
+.pod_brief .background {
+  background-image: url(../assets/Bee-afhive.png);
+  background-position: center bottom;
+  background-size: contain;
+}
+.pod_brief .foreground {
+  background-image: url(../assets/Brief-afhive.png);
+  background-position: center bottom;
+  background-size: contain;
+  margin: 30px 30px 0px 30px;
+}
+body.activate_hover .pod_brief:hover .imagery {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.activate_hover .pod_brief:hover .foreground {
+  margin: 30px 60px 0px 60px;
+}
+
+.pod_projects {
+  height: 40vh;
+  height: calc(40vh - 40px);
+  min-height: 300px;
+  background-color: #fef3b3;
+  color: #8d1a14;
+}
+@media (max-width: 960px) {
+  .pod_projects {
+    background-color: #fde666;
+  }
+}
+.pod_projects .background {
+  background-image: url(../assets/plant-afhive.png);
+  background-position: left bottom;
+  background-size: contain;
+  margin: 30px 0px 10px 0px;
+}
+.pod_projects .foreground {
+  background-image: url(../assets/Jobs-afhive.png);
+  background-position: right bottom;
+  background-size: contain;
+  margin: 30px 30px 0px 15px;
+}
+body.activate_hover .pod_projects:hover .imagery {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body.activate_hover .pod_projects:hover .foreground {
+  margin: 60px 30px 0px 15px;
+}
+
+.pod_approvals {
+  height: 40vh;
+  height: calc(40vh - 40px);
+  min-height: 300px;
+  background-color: #fef3b3;
+  color: #8d1a14;
+}
+.pod_approvals .background {
+  background-image: url(../assets/plant-afhive.png);
+  background-position: left bottom;
+  background-size: contain;
+  margin: 30px 0px 10px 0px;
+}
+.pod_approvals .foreground {
+  background-image: url(../assets/Todo-afhive.png);
+  background-position: right bottom;
+  background-size: contain;
+  margin: 30px 30px 0px 15px;
+}
+body.activate_hover .pod_approvals:hover .imagery {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body.activate_hover .pod_approvals:hover .foreground {
+  margin: 60px 30px 0px 15px;
+}
+body.no_hover .pod_approvals .foreground {
+  margin: 60px 30px 0px 15px;
+}
+
+.pod_request {
+  height: 30vh;
+  height: calc(20vh - 20px);
+  min-height: 250px;
+  background-color: #fcd600;
+  color: #8d1a14;
+}
+.pod_request .foreground {
+  background-image: url(../assets/Request-afhive.png);
+  background-position: right bottom;
+  background-size: contain;
+  margin: 15px 15px 0px 15px;
+}
+body.activate_hover .pod_request:hover .imagery {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body.activate_hover .pod_request:hover .foreground {
+  margin: 45px 15px 0px 15px;
+}
+body.no_hover .pod_request .foreground {
+  margin: 45px 15px 0px 15px;
+}
+
+.pod_support {
+  height: 30vh;
+  height: calc(30vh - 20px);
+  min-height: 250px;
+  background-color: #ffffff;
+  color: #8d1a14;
+}
+.pod_support .links a {
+  color: #0d0e1e;
+}
+.pod_support .links a .arrow {
+  border-color: #0d0e1e;
+}
+body.activate_hover .pod_support .links a:hover {
+  color: #8d1a14;
+}
+body.activate_hover .pod_support .links a:hover .arrow {
+  border-color: #8d1a14;
+}
+.pod_support .foreground {
+  background-image: url(../assets/Help-afhive.png);
+  background-position: right bottom;
+  background-size: contain;
+  margin: 45px 5px 0px 15px;
+}
+body.activate_hover .pod_support:hover .imagery {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+body.activate_hover .pod_support:hover .foreground {
+  margin: 75px 5px 0px 15px;
+}
+body.no_hover .pod_support .foreground {
+  margin: 75px 5px 0px 15px;
+}
+
+.pod_assets {
+  height: 60vh;
+  height: calc(60vh - 40px);
+  min-height: 500px;
+  background-color: #fde666;
+  color: #8d1a14;
+}
+.pod_assets .links a {
+  color: #0d0e1e;
+}
+.pod_assets .links a .arrow {
+  border-color: #0d0e1e;
+}
+body.activate_hover .pod_assets .links a:hover {
+  color: #8d1a14;
+}
+body.activate_hover .pod_assets .links a:hover .arrow {
+  border-color: #8d1a14;
+}
+.pod_assets .foreground {
+  background-image: url(../assets/Library-afhive.png);
+  background-position: right bottom;
+  background-size: contain;
+  margin: 30px 15px 0px 15px;
+}
+body.activate_hover .pod_assets:hover .imagery {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body.activate_hover .pod_assets:hover .foreground {
+  margin: 30px 15px 0px 45px;
+}
+body.no_hover .pod_assets .foreground {
+  margin: 30px 15px 0px 45px;
+}
+
+/*# sourceMappingURL=style.css.map */
